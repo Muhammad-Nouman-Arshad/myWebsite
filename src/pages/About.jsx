@@ -61,7 +61,7 @@ function About() {
               <img
                 src={me02}
                 alt="Team Member 2"
-                className="w-full h-80 sm:h-80 lg:h-80 object-cover object-center"
+                className="w-full h-90 sm:h-90 lg:h-80 object-cover object-center"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-2">Muhammad Nouman Arshad</h3>
