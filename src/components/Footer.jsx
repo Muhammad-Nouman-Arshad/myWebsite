@@ -1,11 +1,11 @@
 import React from 'react';
-import {FaYoutube, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
-        {/* Footer grid with 2 columns */}
+        {/* Footer grid with 1 column for mobile, 2 columns for medium+ screens */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Company Information Section */}
@@ -29,8 +29,8 @@ function Footer() {
             <p className="text-gray-300 mb-6">
               Stay connected with us on social media for the latest updates, promotions, and news.
             </p>
-            <div className="flex space-x-6">
-            <a href="https://www.youtube.com/@nomiii013" className="hover:text-red-500" target="_blank" rel="noopener noreferrer">
+            <div className="flex justify-start md:justify-center space-x-6">
+              <a href="https://www.youtube.com/@nomiii013" className="hover:text-red-500" target="_blank" rel="noopener noreferrer">
                 <FaYoutube size={24} />
               </a>
               <a href="https://www.facebook.com/profile.php?id=61550866733973" className="hover:text-blue-500" target="_blank" rel="noopener noreferrer">

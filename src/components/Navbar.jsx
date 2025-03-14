@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // For icons (install lucide-react if not installed)
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -11,9 +19,16 @@ function Navbar() {
           </NavLink>
         </div>
 
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="text-white">
+            {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+          </button>
+        </div>
+
         {/* Right - Links */}
-        <div>
-          <ul className="flex space-x-8 text-lg font-medium">
+        <div className={`md:flex space-x-8 text-lg font-medium ${isOpen ? 'block' : 'hidden'} md:block`}>
+          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
             {/* Home */}
             <li>
               <NavLink

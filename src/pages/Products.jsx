@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 
-import e01 from '../assets/e01.jpg'
-import e02 from '../assets/e02.jpg'
-import e03 from '../assets/e03.jpg'
-import e04 from '../assets/e04.jpg'
+import e01 from '../assets/e01.jpg';
+import e02 from '../assets/e02.jpg';
+import e03 from '../assets/e03.jpg';
+import e04 from '../assets/e04.jpg';
 
-import f01 from '../assets/f05.jpg'
-import f02 from '../assets/f06.jpg'
-import f03 from '../assets/f07.jpg'
-import f04 from '../assets/f08.jpg'
+import f01 from '../assets/f05.jpg';
+import f02 from '../assets/f06.jpg';
+import f03 from '../assets/f07.jpg';
+import f04 from '../assets/f08.jpg';
 
-import h01 from '../assets/h01.jpg'
-import h02 from '../assets/h02.jpg'
-import h03 from '../assets/h03.jpg'
-import h04 from '../assets/h04.jpg'
+import h01 from '../assets/h01.jpg';
+import h02 from '../assets/h02.jpg';
+import h03 from '../assets/h03.jpg';
+import h04 from '../assets/h04.jpg';
 
-import s01 from '../assets/s01.jpg'
-import s02 from '../assets/s02.jpg'
-import s03 from '../assets/s03.jpg'
-import s04 from '../assets/s04.jpg'
-
+import s01 from '../assets/s01.jpg';
+import s02 from '../assets/s02.jpg';
+import s03 from '../assets/s03.jpg';
+import s04 from '../assets/s04.jpg';
 
 const initialProducts = [
   {
@@ -154,18 +153,20 @@ function Products() {
   return (
     <div>
       {/* Products Header */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-10 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Products</h1>
-          <p className="text-lg text-gray-600 mb-8">Explore our wide range of products from various categories.</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Products</h1>
+          <p className="text-base md:text-lg text-gray-600 mb-8">
+            Explore our wide range of products from various categories.
+          </p>
         </div>
       </section>
 
       {/* Category Filter */}
       <section className="py-6 bg-white border-t border-b">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-semibold mb-6">Filter by Category</h2>
-          <div className="inline-flex space-x-4">
+          <h2 className="text-xl md:text-2xl font-semibold mb-6">Filter by Category</h2>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             <button
               className={`px-4 py-2 rounded-lg ${selectedCategory === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'}`}
               onClick={() => filterByCategory('All')}
@@ -201,20 +202,20 @@ function Products() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
             {products.map((product) => (
               <div key={product.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
                 <img
                   src={product.imageUrl}
                   alt={product.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 md:h-48 object-cover"
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-4">{product.price}</p>
-                  <button className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                  <button className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 w-full">
                     Add to Cart
                   </button>
                 </div>

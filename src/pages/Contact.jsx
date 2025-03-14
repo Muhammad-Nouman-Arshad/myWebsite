@@ -29,23 +29,21 @@ function Contact() {
 
   return (
     <>
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-10 sm:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-600 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+          <p className="text-base sm:text-lg text-gray-600 mb-8">
             We'd love to hear from you! Whether you have a question about our products, services, or anything else, our team is ready to help.
           </p>
         </div>
       </section>
-      <div
-        name="Contact"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-16"
-      >
+
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-10 sm:py-16">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Get in Touch</h2>
         <div className="flex flex-col items-center justify-center mt-5">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-slate-200 w-[450px] px-8 py-6 rounded-xl"
+            className="bg-slate-200 w-full max-w-md md:w-[450px] px-6 sm:px-8 py-6 sm:py-8 rounded-xl"
           >
             <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>
 
@@ -100,7 +98,7 @@ function Contact() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300"
+              className="bg-black text-white w-full rounded-lg px-3 py-2 mt-2 hover:bg-gray-800 transition duration-300"
             >
               Send
             </button>
