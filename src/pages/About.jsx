@@ -47,7 +47,7 @@ function About() {
               <img
                 src={me01}
                 alt="Team Member 1"
-                className="w-full h-96 sm:h-72 lg:h-80 object-cover object-center"
+                className="w-full h-80 sm:h-80 lg:h-80 object-cover object-center"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-2">Muhammad Usman Arshad</h3>
@@ -61,7 +61,7 @@ function About() {
               <img
                 src={me02}
                 alt="Team Member 2"
-                className="w-full h-96 sm:h-72 lg:h-80 object-cover object-center"
+                className="w-full h-80 sm:h-80 lg:h-80 object-cover object-center"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-2">Muhammad Nouman Arshad</h3>
@@ -75,7 +75,7 @@ function About() {
               <img
                 src={me03}
                 alt="Team Member 3"
-                className="w-full h-96 sm:h-72 lg:h-80 object-cover object-center"
+                className="w-full h-80 sm:h-80 lg:h-80 object-cover object-center"
               />
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-2">Muhammad Zeeshan Arshad</h3>
